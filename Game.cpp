@@ -10,12 +10,50 @@ Game::Game( int width, int height, std::string title )
 	this->Run();
 }
 
+void Game::RunTest()
+{
+	constexpr unsigned TPS = 30; //ticks per seconds
+	const sf::Time     timePerUpdate = sf::seconds( 1.0f / float( TPS ) );
+	unsigned ticks = 0;
+
+	sf::Clock timer;
+	auto lastTime = sf::Time::Zero;
+	auto lag = sf::Time::Zero;
+
+	//Main loop of the game
+	while ( this->_data->window.isOpen() ) {
+		this->_data->machine.ProcessStateChanges();
+
+		//Get times
+		auto time = timer.getElapsedTime();
+		auto elapsed = time - lastTime;
+		lastTime = time;
+		lag += elapsed;
+
+		//Real time update
+		this->_data->machine.GetActiveState()->HandleInput();
+		this->_data->machine.GetActiveState()->Update( elapsed.asSeconds() );
+
+		//Fixed time update
+		while ( lag >= timePerUpdate )
+		{
+			ticks++;
+			lag -= timePerUpdate;
+		}
+
+		//Render
+		//interpolation = accumulator / this->dt;
+		this->_data->machine.GetActiveState()->Draw( 1.f );
+
+	}
+}
+
 void Game::Run()
 {
 	float newTime, frameTime, interpolation;
 	float currentTime = this->_clock.getElapsedTime().asSeconds();
 	float accumulator = 0.0f;
-
+	int count = 0;
 	// Loop Game;
 	while ( this->_data->window.isOpen() )
 	{
@@ -23,6 +61,10 @@ void Game::Run()
 		newTime = this->_clock.getElapsedTime().asSeconds();
 		frameTime = newTime - currentTime;
 
+		/*std::cout << currentTime << std::endl;
+		std::cout << newTime << std::endl;
+		std::cout << frameTime << std::endl;*/
+		
 		if ( frameTime > 0.25f )
 		{
 			frameTime = 0.25f;
@@ -30,6 +72,9 @@ void Game::Run()
 
 		currentTime = newTime;
 		accumulator += frameTime;
+		/*std::cout << accumulator << std::endl; 
+		std::cout << dt << std::endl;
+		std::cout << std::endl;*/
 
 		while ( accumulator >= this->dt )
 		{
@@ -37,8 +82,10 @@ void Game::Run()
 			this->_data->machine.GetActiveState()->Update( this->dt );
 
 			accumulator -= this->dt;
+			//count++;
 		}
-
+		/*std::cout << count << std::endl;
+		std::cout << std::endl;*/
 		interpolation = accumulator / this->dt;
 		this->_data->machine.GetActiveState()->Draw( interpolation );
 	}

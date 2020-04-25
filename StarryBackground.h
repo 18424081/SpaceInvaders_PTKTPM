@@ -13,9 +13,9 @@ public:
     void draw( sf::RenderTarget& renderer );
 
 private:
-    void giveStarRandomStartLocation( sf::Vertex& v );
+    void RandomStartLocation( sf::Vertex& v );
 
-    std::vector<sf::Vertex> m_stars;
+    std::vector<sf::Vertex> _stars;
 
-    Random<> m_rng;
+    Random<> _rng;
 };

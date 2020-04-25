@@ -33,6 +33,7 @@ private:
 	GameDataRef _data = std::make_shared<GameData>();
 
 	void Run();
+	void RunTest();
 
 public:
 	Game( int width, int height, std::string title );

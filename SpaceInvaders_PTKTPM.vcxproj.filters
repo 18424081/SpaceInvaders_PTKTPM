@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{4208184d-d055-4574-be4b-16f5ee2f235e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="State">
+      <UniqueIdentifier>{3494863a-1151-4255-ab2b-231457e8d741}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Suport LAN">
+      <UniqueIdentifier>{df95c483-e943-4146-ad77-2bcadad4e5dd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Score.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Invader.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="StarryBackground.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="StateMachine.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="SplashState.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="PauseState.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuState.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="InvaderManager.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetManager.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="IncludePlayerNInvader.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Projectile.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ShowObjectWithType.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="UFO.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Network.cpp">
+      <Filter>Suport LAN</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Suport LAN</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStateLan.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerRed.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOverState.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="GameWinState.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="HighScore.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="HighScoreState.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="DetonationEffect.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AssetManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DEFINITIONS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Random.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Invader.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Score.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="InvaderManager.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="StarryBackground.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="StateMachine.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="SplashState.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="PauseState.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuState.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="IncludePlayerNInvader.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Projectile.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ShowObjectWithType.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="UFO.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="DetonationEffect.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ENUMCLASS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Network.h">
+      <Filter>Suport LAN</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Suport LAN</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStateLan.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerRed.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOverState.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="GameWinState.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="HighScore.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="HighScoreState.h">
+      <Filter>State</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

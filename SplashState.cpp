@@ -1,5 +1,7 @@
 #include "SplashState.h"
 #include "MainMenuState.h"
+#include "GameWinState.h"
+#include "GameOverState.h"
 
 SplashState::SplashState( GameDataRef data ) : _data( data )
 {
@@ -37,10 +39,10 @@ void SplashState::Update( float dt )
 	this->_background.update( 0.01 );
 	if ( this->_clock.getElapsedTime().asSeconds() > SPLASH_STATE_SHOW_TIME )
 	{
-		std::cout << "Go to Main Menu" << std::endl;
-		// Switch to the Main Menu.
 		std::cout << "Switch to Main Menu" << std::endl;
-		this->_data->machine.AddState( StateRef( new MainMenuState( _data ) ), true );
+		//this->_data->machine.AddState( StateRef( new MainMenuState( _data ) ), true );
+		this->_data->machine.AddState( StateRef( new GameWinState( _data, 100 ) ), true );
+		//this->_data->machine.AddState( StateRef( new GameOverState( _data ) ), true );
 	}
 }
 
