@@ -25,18 +25,10 @@ private:
     GameDataRef _data;
 
 	Score* _score;
-	/*InvaderManager* _invaderManager;
-	Player* _player;*/
 	IncludePlayerNInvader* _includePlayerNInvader;
 	
-	int flagIcon1 = 1;
-    int m_score = 0;
     bool _isGameover;
 	bool _isGameWin;
-    sf::Clock m_gameOverClock;
-	sf::Clock _clock;
-
-	sf::Sprite _playerIcon;
 
 public:
 	GameState( GameDataRef data );

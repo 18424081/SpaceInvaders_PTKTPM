@@ -71,12 +71,12 @@ void GameState::HandleInput()
 	if ( _includePlayerNInvader->checkWinGame() )
 	{
 		this->_data->machine.RemoveState();
-		this->_data->machine.AddState( StateRef( new GameWinState( _data, _score->getScore() ) ), false );
+		this->_data->machine.AddState( StateRef( new GameWinState( _data, _score->getScore() ) ), true );
 	}
 	else if ( _includePlayerNInvader->checkOverGame() )
 	{
 		this->_data->machine.RemoveState();
-		this->_data->machine.AddState( StateRef( new GameOverState( _data ) ), false );
+		this->_data->machine.AddState( StateRef( new GameOverState( _data ) ), true );
 	}
 	else if ( !_includePlayerNInvader->checkWinGame() && !_includePlayerNInvader->checkOverGame() )
 		_includePlayerNInvader->HandleInput();

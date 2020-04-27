@@ -87,7 +87,6 @@ int Projectile::CheckKillPlayer( Player& player )
     {
         if ( getRectangle().intersects( player.getRectangle() ) )
         {
-            std::cout << "Kill player" << std::endl;
             player.setIsLive( false );
             return 1;
         }

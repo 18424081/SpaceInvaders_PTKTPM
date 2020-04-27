@@ -15,11 +15,13 @@ void MainMenuState::Init()
 	this->_data->asset.LoadTexture( "GameTitle", MAIN_MENU_TITLE );
 	this->_data->asset.LoadTexture( "ExitButton", EXIT_BUTTON );
 	this->_data->asset.LoadTexture( "HighScoreButton", HIGHSCORE_BUTTON );
+	this->_data->asset.LoadTexture( "About", ABOUT_BUTTON );
 
 	this->_title.setTexture( this->_data->asset.GetTexture( "GameTitle" ) );
 	this->_playButton.setTexture( this->_data->asset.GetTexture( "PlayButton" ) );
 	this->_exitButton.setTexture( this->_data->asset.GetTexture( "ExitButton" ) );
 	this->_highScore.setTexture( this->_data->asset.GetTexture( "HighScoreButton" ) );
+	this->_about.setTexture( this->_data->asset.GetTexture( "About" ) );
 
 	this->_title.setPosition( ( SCREEN_WIDTH / 2 ) - ( this->_title.getGlobalBounds().width / 2 ),
 		this->_title.getGlobalBounds().height * 0.1 );
@@ -30,6 +32,8 @@ void MainMenuState::Init()
 		( SCREEN_HEIGHT / 2 + 0) - ( this->_playButton.getGlobalBounds().height / 2 ) );
 	this->_exitButton.setPosition( ( SCREEN_WIDTH / 2 ) - ( this->_playButton.getGlobalBounds().width / 2 ),
 		( SCREEN_HEIGHT / 2 + 150) - ( this->_playButton.getGlobalBounds().height / 2 ) );
+	this->_about.setPosition( ( SCREEN_WIDTH / 2 ) - ( this->_about.getGlobalBounds().width / 2 ),
+		( SCREEN_HEIGHT / 2 + 300 ) - ( this->_about.getGlobalBounds().height / 2 ) );
 	
 }
 
@@ -68,6 +72,12 @@ void MainMenuState::HandleInput()
 			std::cout << "Go to HighScore Screen" << std::endl;
 			this->_data->machine.AddState( StateRef( new HighScoreState( _data ) ), true );
 		}
+		if ( this->_data->input.IsSpriteClicked(
+			this->_about, sf::Mouse::Left, this->_data->window ) )
+		{
+			std::cout << "Go to About Screen" << std::endl;
+			this->_data->machine.AddState( StateRef( new About( _data ) ), true );
+		}
 	}
 }
 void MainMenuState::Update( float dt )
@@ -84,6 +94,7 @@ void MainMenuState::Draw( float dt )
 	this->_data->window.draw( this->_playButton );
 	this->_data->window.draw( this->_exitButton );
 	this->_data->window.draw( this->_highScore );
+	this->_data->window.draw( this->_about );
 
 	this->_data->window.display();
 }

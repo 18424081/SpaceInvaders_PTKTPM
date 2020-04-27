@@ -9,6 +9,7 @@
 #include "DEFINITIONS.h"
 #include "StarryBackground.h"
 #include "HighScoreState.h"
+#include "About.h"
 
 class MainMenuState : public State
 {
@@ -18,6 +19,7 @@ private:
 	sf::Sprite _title;
 	sf::Sprite _exitButton;
 	sf::Sprite _highScore;
+	sf::Sprite _about;
 
 	StarryBackground _background;
 

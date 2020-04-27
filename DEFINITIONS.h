@@ -15,9 +15,13 @@
 #define START_BUTTON "Resources/texture/start_button.png"
 #define EXIT_BUTTON "Resources/texture/exit_button.png"
 #define SUBMIT_BUTTON "Resources/texture/submit_button.png"
+#define ABOUT_BUTTON "Resources/texture/about_button.png"
 
-//Splash State.
+// Splash State.
 #define SPLASH_SCENE_BACKGROUND_FILEPATH "Resources/texture/SplashBackground.png"
+
+// About State.
+#define ABOUT "Resources/texture/About.png"
 
 // Main Menu State.
 #define MAIN_MENU_BACKGROUND_FILEPATH "Resources/texture/Logo.png"
