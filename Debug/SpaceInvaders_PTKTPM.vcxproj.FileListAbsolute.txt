@@ -1,4 +1,0 @@
-V:\workspace_C_visual\SpaceInvaders_PTKTPM2\Debug\SpaceInvaders_PTKTPM.exe
-V:\workspace_C_visual\SpaceInvaders_PTKTPM2\Debug\SpaceInvaders_PTKTPM.pdb
-V:\workspace_C_visual\SpaceInvaders_PTKTPM\Debug\SpaceInvaders_PTKTPM.exe
-V:\workspace_C_visual\SpaceInvaders_PTKTPM\Debug\SpaceInvaders_PTKTPM.pdb
